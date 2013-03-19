@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+	<style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            width: 300px;
+            height: 300px;
+            background: #ccc;
+            margin: 10px;
+        }
+
+        .red {
+            background:red;
+        }
+
+        .green {
+            background: green;
+        }
+    </style>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="auxiliar.css">
+		
+		<!-- EXTERNAL LIBRARIES -->
+		<!-- jQuery imports-->
+		<script type="text/javascript" src="jquery-1.9.1.js"></script>
+		<!-- TAP-QUO.JS-->
+		<script type="text/javascript" src="TapQuo/quo.js"></script>
+		
+		<!-- OWN LIBRARIES -->
+		<!-- Gallery JS -->
+		<script type="text/javascript" src="gallery.js"></script>
+				
+		<title>Alex Coll-Gaudí :: International Photography</title>
+	</head>
+	<body>
+		<div id="container">
+			<!--
+			<div id="infoPhotographer" class="rounded-box gray">
+				<div>
+					<h3>Información sobre el fotografo</h3>
+					<p>Texto fijo que quieras poner</p>
+				</div>				
+			</div>	
+			-->
+			<div id="gallery">
+				<div id="gallery-controls">
+					<div id="next-img" class="control"></div>
+					<div id="previous-img" class="control"></div>
+				</div>
+				<div id="img-container">
+					<!-- <div class="imagen">
+						<img src="img/album1/a.jpg" alt="prueba">
+					</div> 	-->					
+				</div> 				
+			</div>			
+			<!--
+			<div id="nav-menu" class="dotted">
+				<h3>Menú navegación</h3>				
+			</div>
+			-->
+		</div>
+	<!-- Control gesture events -->	
+	<script>
+		$$("#gallery").swipeRight(function() {
+            previousPictureFunc();
+        });		
+		$$("#gallery").swipeLeft(function() {
+            nextPictureFunc();
+        });	
+    </script>		
+	</body>
+</html>
